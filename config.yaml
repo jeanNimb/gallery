@@ -1,0 +1,5 @@
+consumedir: "consume"
+outdir: "out"
+dbname: "db.sqlite"
+url: "localhost"
+port: "8090"

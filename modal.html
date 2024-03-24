@@ -1,0 +1,15 @@
+<div id="modal-image" class="modal">
+  {{#img}}
+  <img id="a{{Id}}" alt="pic" src="data:image/png;base64,{{Content}}" class="modal-item" height="400" width="400" hx-trigger="click" hx-post="/?msg=close_modal" hx-target="#modal">
+  <div id="tag-input">
+    <label class="modal-tag" for="add-tag">add tag:</label>
+    <input type="text" id="add-tag" name="tag" />
+    <button hx-trigger="click" hx-post="/?msg=add_tag" hx-target="#modal" hx-include="#add-tag" hx-vals='{"Id": {{Id}}}'>Add Tag</button>
+  </div>
+  <ul id="image-tags">
+    {{#Tags}}
+    <li class="modal-item modal-tag">{{.}}</li>
+    {{/Tags}}
+  </ul>
+  {{/img}}
+</div>

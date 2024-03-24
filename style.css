@@ -1,0 +1,67 @@
+h1 {
+    color: blueviolet;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 10px;
+    column-gap: 10px;
+}
+
+.gallery-item {
+    width: 100%;
+    height: auto;
+    border: thick double white;
+}
+
+.gallery-item:hover {
+    border: thick double #32a1ce;
+}
+
+.modal {
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+    display: grid;
+    justify-content: center;
+}
+
+.modal-item {}
+
+#tag-input {
+    display: flex;
+    flex-direction: row;
+    height: 2em;
+}
+
+#add-tag {
+    flex-grow: 1;
+}
+
+#image-tags {
+    display: flex;
+    flex-direction: row;
+    height: 2em;
+    list-style-type: none;
+}
+
+.modal-tag {
+    color: #ffffff;
+    padding-right: 10px;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <title>Gallery</title>
+  <link rel="stylesheet" href="data:text/css;base64,{{style}}">
+  <script src="data:text/javascript;base64,{{htmx}}"></script>
+</head>
+
+<body>
+  <label for="image-search">Search Image:</label>
+  <input type="search" id="image-search" name="q" />
+  <button hx-trigger="click" hx-post="/?msg=search" hx-target="#content" hx-include="#image-search">Search</button>
+
+  <div id="content" class="gallery-container">
+    {{#imgs}}
+    <img id="a{{Id}}" class="gallery-item" alt="pic" src="data:image/png;base64,{{Content}}" hx-trigger="click" hx-post="/?msg=show_img" hx-target="#modal" hx-vals='{"Id": {{Id}}}'>
+    {{/imgs}}
+  </div>
+
+  <div id="modal"></div>
+</body>
+
+</html>

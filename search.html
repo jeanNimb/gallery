@@ -1,0 +1,3 @@
+{{#imgs}}
+<img id="a{{Id}}" class="gallery-item" alt="pic" src="data:image/png;base64,{{Content}}" hx-trigger="click" hx-post="/?msg=show_img" hx-target="#modal" hx-vals='{"Id": {{Id}}}'>
+{{/imgs}}

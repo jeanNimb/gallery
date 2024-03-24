@@ -1,2 +1,2 @@
 # gallery
-A tiny gallery application made with go
+A tiny gallery application made with go.
